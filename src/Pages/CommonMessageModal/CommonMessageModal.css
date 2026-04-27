@@ -1,0 +1,49 @@
+.common-message-modal {
+  background-color: var(--white-color);
+  padding: 32px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.modal-title {
+  color: var(--primary-color);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.modal-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.line {
+   flex: 1;
+  height: 1px;
+  background-color: rgba(var(--primary-color-rgb), 0.3);
+}
+
+.message-icon {
+  font-size: 26px;
+  color:  var(--primary-color);
+}
+
+.modal-message {
+  color: var(--primary-color);
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.modal-btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  padding: 10px 26px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal-btn:hover {
+  opacity: 0.9;
+}

@@ -1,0 +1,186 @@
+/* ================================
+   BOOK NOW SECTION
+================================ */
+
+.book-now-section {
+    width: 100%;
+    min-height: 90vh;
+    background-color: var(--white-color);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 40px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Centered Card */
+.book-now-card {
+    background-color: rgba(245, 240, 236, 0.90);
+    border-radius: 20px;
+    padding: 60px 80px;
+    max-width: 800px;
+    width: 55%;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.book-now-title {
+    /* font-family: var(--primary-font-family); */
+    font-size: 45px;
+    font-weight: 500;
+    color: var(--brown-color);
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+}
+
+/* Subtitle */
+.book-now-subtitle {
+    font-family: var(--inter-font-family);
+    font-size: 22px;
+    font-weight: 400;
+    color: #332824;
+    margin: 0 0 40px 0;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+/* Buttons Container */
+.book-now-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Book Now Button - Filled */
+.btn-book-now {
+    font-family: var(--inter-font-family);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white-color);
+    background-color: var(--maroon-color);
+    border: none;
+    border-radius: 12px;
+    padding: 14px 40px;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-book-now:hover {
+    /* background-color: #5D4433; */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(74, 51, 38, 0.3);
+}
+
+/* Contact Support Button - Outlined */
+.btn-contact-support {
+    font-family: var(--inter-font-family);
+    font-size: 14px;
+    font-weight: 500;
+    color: #4A3326;
+    background-color: transparent;
+    border: 2px solid #4A3326;
+    border-radius: 12px;
+    padding: 14px 0px;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-contact-support:hover {
+    background-color: var(--maroon-color);
+    color: var(--white-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(74, 51, 38, 0.3);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 992px) {
+    .book-now-section {
+        min-height: 60vh;
+        padding: 60px 30px;
+    }
+
+    .book-now-card {
+        padding: 50px 60px;
+        width: 80%;
+    }
+
+    .book-now-title {
+        font-size: 42px;
+    }
+
+    .book-now-subtitle {
+        font-size: 16px;
+    }
+
+    .btn-book-now,
+    .btn-contact-support {
+        font-size: 13px;
+        padding: 13px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .book-now-section {
+        min-height: 50vh;
+        padding: 50px 20px;
+    }
+
+    .book-now-card {
+        padding: 40px 40px;
+        border-radius: 40px;
+        width: 90%;
+    }
+
+    .book-now-title {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .book-now-subtitle {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    .book-now-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-book-now,
+    .btn-contact-support {
+        width: 100%;
+        padding: 13px 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .book-now-card {
+        padding: 35px 30px;
+        border-radius: 30px;
+    }
+
+    .book-now-title {
+        font-size: 28px;
+    }
+
+    .book-now-subtitle {
+        font-size: 14px;
+    }
+
+    .btn-book-now,
+    .btn-contact-support {
+        font-size: 12px;
+        padding: 11px 20px;
+    }
+}

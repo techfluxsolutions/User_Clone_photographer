@@ -1,0 +1,111 @@
+.maternity-why-veroa-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--white-color);
+    padding: 40px 20px;
+}
+
+.maternity-why-veroa-title-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.maternity-why-veroa-title {
+    font-family: var(--primary-font-family);
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    /* background: linear-gradient(90deg, #4A3326, #B0795A); */
+    background: transparent;
+    color: var(--brown-color);
+    display: inline-block;
+}
+
+
+.maternity-why-veroa-content {
+    display: flex;
+    justify-content: center;
+}
+
+.maternity-why-veroa-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.maternity-why-veroa-card {
+    background-color: var(--beige-color);
+    /* Beige/light brown card bg */
+    width: 300px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    gap: 20px;
+    transition: transform 0.3s ease;
+    border: 1px solid #D6C8BC;
+    border-radius: 20px;
+}
+
+.maternity-why-veroa-card:hover {
+    transform: translateY(-5px);
+}
+
+.maternity-why-icon {
+    width: 80px;
+    /* Adjusted icon size */
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.maternity-why-card-text {
+    font-family: var(--primary-font-family);
+    font-size: 20px;
+    color: #4A3326;
+    line-height: 1.3;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .maternity-why-veroa-section {
+        flex-direction: column;
+        padding: 40px 0;
+    }
+
+    .maternity-why-veroa-title-container {
+        width: 100%;
+    }
+
+    .maternity-why-veroa-title {
+        font-size: 32px;
+    }
+
+    .maternity-why-veroa-content {
+        padding: 0 20px;
+    }
+
+    .maternity-why-veroa-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .maternity-why-veroa-card {
+        width: 100%;
+        max-width: 320px;
+        /* Allow wider cards on mobile */
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .maternity-why-veroa-title {
+        font-size: 28px;
+    }
+}

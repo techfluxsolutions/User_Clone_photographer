@@ -1,0 +1,252 @@
+/* ================================
+   WHY CHOOSE SECTION
+================================ */
+
+.why-choose-section {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white-color);
+    padding: 35px 20px;
+}
+
+.why-choose-heading {
+    font-family: var(--primary-font-family);
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--brown-color);
+    /* Dark Brown */
+    margin: 0 0 60px 0;
+    text-align: center;
+}
+
+/* Main Content Area */
+.why-choose-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.why-choose-grid-container {
+    position: relative;
+    max-width: 1200px;
+    width: 90%;
+}
+
+/* Separators */
+.separator-vertical-top {
+    position: absolute;
+    bottom: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* width: 1px; */
+    height: 50%;
+    max-height: 45%;
+    /* Add slight gap from top edge if needed, or keep 50% */
+    z-index: 1;
+    object-fit: cover;
+}
+
+.separator-vertical-bottom {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* width: 1px; */
+    height: 50%;
+    max-height: 45%;
+    /* Add slight gap from bottom edge */
+    z-index: 1;
+    object-fit: cover;
+}
+
+.separator-horizontal-left {
+    position: absolute;
+    right: 55%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    /* height: 1px; */
+    z-index: 1;
+    object-fit: cover;
+}
+
+.separator-horizontal-right {
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    /* height: 1px; */
+    z-index: 1;
+    object-fit: cover;
+}
+
+.separator-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+}
+
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /* Force 2 rows */
+    width: 100%;
+    height: 600px;
+    /* Define a height for the grid to space items out */
+    position: relative;
+    z-index: 3;
+}
+
+/* Feature Cards */
+.feature-card {
+    background-color: transparent;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* No hover effects or shadows */
+}
+
+/* Feature Icon */
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 25px;
+}
+
+/* Feature Title */
+.feature-title {
+    font-family: var(--inter-font-family);
+    font-size: 24px;
+    font-weight: 400;
+    color: #4A3326;
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+}
+
+/* Feature Subtitle */
+.feature-subtitle {
+    font-family: var(--inter-font-family);
+    font-size: 14px;
+    font-weight: 400;
+    color: #888888;
+    margin: 0;
+    line-height: 1.5;
+    max-width: 250px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1200px) {
+    .why-choose-content {
+        padding: 0;
+        /* Removed padding as it's handled by grid-container width */
+    }
+}
+
+@media (max-width: 992px) {
+    .why-choose-content {
+        padding: 0;
+        /* Removed padding as it's handled by grid-container width */
+    }
+}
+
+@media (max-width: 768px) {
+    .why-choose-section {
+        flex-direction: column;
+        min-height: auto;
+        overflow: visible;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .why-choose-heading {
+        font-size: 40px;
+        margin-bottom: 20px;
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+        background: none;
+        -webkit-background-clip: initial;
+        -webkit-text-fill-color: initial;
+        background-clip: initial;
+        color: #3e2b22;
+        /* Ensure dark brown color on mobile */
+    }
+
+    .why-choose-content {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        padding: 0 30px;
+        /* Adjusted padding for mobile */
+    }
+
+    .features-grid {
+        height: auto;
+        gap: 5px;
+        /* Use gap instead of fixed height layout on mobile */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    /* Hide separators on mobile as the layout typically stacks */
+    .separator-vertical-top,
+    .separator-vertical-bottom,
+    .separator-horizontal-left,
+    .separator-horizontal-right,
+    .separator-middle {
+        display: none;
+    }
+
+    .feature-card {
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+        /* Simple separator for stacked */
+    }
+
+    .feature-card:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .why-choose-heading {
+        font-size: 28px;
+    }
+
+    .why-choose-content {
+        padding: 0 20px;
+        /* Increased side padding slightly for better look */
+    }
+
+    .feature-card {
+        padding: 35px 25px;
+    }
+
+    .feature-title {
+        font-size: 18px;
+    }
+
+    .feature-subtitle {
+        font-size: 13px;
+    }
+}

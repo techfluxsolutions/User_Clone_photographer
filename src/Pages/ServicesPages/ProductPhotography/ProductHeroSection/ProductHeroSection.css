@@ -1,0 +1,126 @@
+.food-hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+}
+
+.food-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.food-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.food-title {
+    font-family: var(--primary-font-family);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.food-subtitle {
+    /* font-family: var(--tertiary-font-family); */
+    font-size: 30px;
+    font-weight: 300;
+    margin: 0 0 20px 0;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    text-align: left;
+    line-height: 1.1;
+}
+
+.food-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.food-btn {
+    padding: 10px 30px;
+    font-size: 16px;
+    font-family: var(--inter-font-family);
+    font-weight: 500;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.food-btn-quote {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.food-btn-contact {
+    background-color: var(--brown-color);
+    color: #FFFFFF;
+}
+
+.food-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .food-hero {
+        height: auto;
+        min-height: 60vh;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .food-content {
+        padding: 0 30px;
+    }
+
+    .food-title {
+        font-size: 36px;
+    }
+
+    .food-subtitle {
+        font-size: 18px;
+    }
+
+    .food-buttons {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .food-btn {
+        width: 100%;
+    }
+}

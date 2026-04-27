@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* ================================
+   GLOBAL THEME VARIABLES
+================================ */
+
+:root {
+  /* Button */
+  --primary-color: #4A3326;
+  --primary-color-rgb: 74, 51, 38;
+  /* #4A3326 */
+  /* Section background */
+
+  --tertiary-color: #e6dccf;
+
+  --text-color: #000000;
+
+  --white-color: #ffffff;
+  --beige-color: #c3ae9a;
+  --brown-color: #332824;
+  --maroon-color: #321912;
+
+  /* Font Families */
+  --primary-font-family: "Libre Baskerville";
+  --secondary-font-family: "Cinzel";
+  --tertiary-font-family: "Poppins";
+  --inter-font-family: "Inter", sans-serif;
+
+
+  --border-radius: 4px;
+}
+
+
+/* ================================
+   GLOBAL RESETS (optional)
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--inter-font-family);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title,
+.section-title {
+  font-family: var(--primary-font-family);
+  color: var( --primary-color);
+}
+
+.buttons {
+  width: 100%;
+  font-weight: 700;
+  margin-bottom: 40px;
+  /* margin-top: 60px !important; */
+  margin-top: 60px;
+  color: var(--primary-color);
+}
+
+.buttons {
+  width: 100%;
+  height: 48px;
+ background-color: var(--maroon-color);
+   color: var(--white-color);
+  border-radius: 10px;
+  margin-top: 30px;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.buttons:hover {
+ background-color: #c3ae9a;
+  color: var(--white-color);
+}
+
+/* Dropdown options */
+select option {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+/* Selected option */
+select option:checked {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+/* Hover (works in Firefox, partial elsewhere) */
+select option:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+@media (max-width: 767px) {
+  .buttons {
+    font-size: 18px;
+  }
+}

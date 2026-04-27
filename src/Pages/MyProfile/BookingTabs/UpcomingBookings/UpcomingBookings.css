@@ -1,0 +1,338 @@
+.booking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Card */
+/* .booking-card {
+  background-color: var(--tertiary-color);
+  border-radius: 18px;
+  padding: 28px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+} */
+ .booking-card {
+   
+    background-color: var(--tertiary-color);
+    border-radius: 18px;
+    display: flex;
+    padding: 28px 32px;
+    justify-content: space-between;
+      align-items: flex-start;
+}
+
+/* Left section */
+.booking-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.booking-title-upcoming {
+  font-size: 22px;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.booking-icon {
+  font-size: 20px;
+}
+
+.booking-date {
+  font-size: 14px;
+  color: rgba(var(--primary-color-rgb), 0.7);
+  /* margin-left: -34px; */
+  text-align: left;
+}
+
+/* Ratings */
+.booking-rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.rating-label {
+  font-style: italic;
+  font-size: 14px;
+  color: var(--primary-color);
+}
+
+.stars {
+  color: #FFC107;
+  font-size: 18px;
+  letter-spacing: 4px;
+  margin-top: -6px;
+}
+
+/* View details */
+.view-details {
+  /* margin-top: 20px; */
+  background: transparent;
+  border: none;
+  color: var(--primary-color-rgb);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 18px;
+  width: fit-content;
+  border: solid 1px;
+  border-radius: 5px;
+}
+
+.view-details:hover {
+  text-decoration: underline;
+}
+
+/* Right section */
+
+.booking-right {
+  display: grid;
+  justify-items: end;
+
+  gap: 8px;
+
+  text-align: right;
+  min-width: 180px;
+}
+/* .booking-right {
+  text-align: left;
+} */
+
+.paymentStatus {
+  color: rgba(var(--primary-color-rgb), 0.7);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.status {
+  color: rgba(var(--primary-color-rgb), 0.7);
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+
+/* =========================
+   STATUS TRACKER
+========================= */
+
+.status-tracker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+/* Line holding circles */
+.status-line {
+  display: flex;
+  align-items: center;
+}
+
+/* Circle */
+.status-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #d1d1d1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.status-circle.active {
+  background-color: var(--primary-color);
+}
+
+.status-circle.cancel {
+  background-color: #d32f2f; /* red */
+}
+
+/* Cross icon */
+.cancel-cross {
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+}
+/* Connector line */
+.status-connector {
+  width: 28px;
+  height: 2px;
+  background-color: #d1d1d1;
+}
+
+.status-connector.active {
+  background-color: var(--primary-color);
+}
+
+/* Status text */
+.status-label {
+  font-size: 14px;
+  color: rgba(var(--primary-color-rgb), 0.8);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+
+
+
+
+
+.amount-breakdown {
+  margin-top: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 8px;
+}
+
+.amount {
+ 
+  color: var(--primary-color);
+  margin-top: 6px;
+  font-size: 16px;
+  margin: 0;
+}
+
+.amount.total {
+  font-weight: 600;
+}
+
+.amount.paid {
+  color: #28a745; /* green */
+}
+
+.amount.remaining {
+  color: #dc3545; /* red */
+  font-weight: 600;
+}
+
+
+/* .Pay-Outstanding_Amount {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+} */
+
+.Pay-Outstanding_Amount {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px; /* smaller spacing */
+}
+
+.Pay-Outstanding_Amount:hover:not(:disabled) {
+  opacity: 0.8;
+}
+
+.Pay-Outstanding_Amount:disabled {
+  background-color: #e0e0e0;
+  color: var(--primary-color);
+  cursor: not-allowed;
+  opacity: 0.7;
+  box-shadow: none;
+  transform: none;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .status-tracker {
+    /* flex-direction: column; */
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .status-line {
+    transform: scale(0.9);
+  }
+
+  .status-label {
+    font-size: 13px;
+  }
+}
+
+
+
+.cake-icon {
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.stars svg {
+  color: #FFC107;
+  font-size: 18px;
+  margin-right: 4px;
+}
+/* Actions */
+.booking-actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: flex-start;
+  margin-top: 18px;
+}
+
+/* Modify button */
+.modify-btn {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.Pay-Outstanding_Amount{
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 8px 20px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.Pay-Outstanding_Amount:hover {
+  opacity: 0.9;
+}
+
+
+/* Mobile Responsive */
+/* Mobile reorder */
+@media (max-width: 768px) {
+  .booking-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .booking-right {
+    order: 1;
+    margin-bottom: 10px;
+  }
+
+  .booking-actions {
+    order: 2;
+    margin-top: 10px;
+  }
+  .Pay-Outstanding_Amount{
+  margin-top: 0px;
+}
+}
+

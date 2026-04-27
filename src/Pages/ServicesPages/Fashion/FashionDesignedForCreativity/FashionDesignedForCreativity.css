@@ -1,0 +1,61 @@
+.fashion-creativity-section {
+    padding: 80px 5%;
+    background-color: var(--white-color, #ffffff);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fashion-creativity-section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fashion-creativity-header {
+    margin-bottom: 50px;
+}
+
+.fashion-creativity-title {
+    font-family: var(--primary-font-family);
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #4A3326;
+    margin: 0;
+}
+
+.fashion-creativity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fashion-creativity-item {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.fashion-creativity-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.fashion-creativity-item:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .fashion-creativity-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .fashion-creativity-title {
+        font-size: 2.5rem;
+    }
+}

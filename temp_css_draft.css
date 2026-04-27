@@ -1,0 +1,33 @@
+/* ServiceOffersSection.css */
+
+/* ... existing styles ... */
+
+@media (max-width: 900px) {
+    .offers-cards-wrapper {
+        max-width: 220px;
+        /* Show 1 card on mobile */
+        perspective: 1000px;
+        /* Essential for 3D effect */
+        overflow: visible;
+        /* Allow 3D elements to be seen if they rotate out */
+    }
+
+    /* Key change: Apply cube rotation logic */
+    .mobile-cube-effect {
+        /* We'll use the existing translateX for the slider movement, 
+           but combine it with 3D rotation in the cards */
+        transform-style: preserve-3d;
+    }
+
+    .mobile-cube-effect .offers-card {
+        /*
+          To simulate a cube, existing cards need to rotate based on their position.
+          However, implementing a true 3D cube with just a flat list and translateX is complex 
+          without recreating the DOM structure into a cube.
+          
+          Instead, we can simulate a "flip" or "turn" effect that looks like a cube face turning.
+        */
+        backface-visibility: hidden;
+        /* transition: transform 0.6s; matching container */
+    }
+}

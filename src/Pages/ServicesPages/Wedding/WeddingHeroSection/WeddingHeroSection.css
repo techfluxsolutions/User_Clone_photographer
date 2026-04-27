@@ -1,0 +1,136 @@
+.wedding-hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    text-align: center;
+}
+
+.wedding-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Removed overlay - only using container background */
+    z-index: 1;
+}
+
+.wedding-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 35px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 4%;
+    background-color: rgba(255, 255, 255, 0.483);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.wedding-title {
+    font-family: var(--primary-font-family);
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    color: var(--brown-color);
+}
+
+.wedding-subtitle {
+    /* font-family: var(--tertiary-font-family); */
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    color: var(--brown-color);
+}
+
+.wedding-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.wedding-btn {
+    padding: 8px 20px;
+    font-size: 15px;
+    font-family: var(--inter-font-family);
+    font-weight: 500;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.wedding-btn-quote {
+    background-color: #FDFCF8;
+    /* Off-white/cream */
+    color: #4A3326;
+    /* Brown text */
+}
+
+.wedding-btn-contact {
+    background-color: var(--brown-color);
+    /* Brown background */
+    color: #FFFFFF;
+}
+
+.wedding-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .wedding-hero {
+        height: auto;
+        min-height: 60vh;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .wedding-content {
+        margin-top: 0;
+        padding: 65px 50px;
+    }
+
+    .wedding-title {
+        font-size: 32px;
+    }
+
+    .wedding-subtitle {
+        font-size: 16px;
+    }
+
+    .wedding-buttons {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .wedding-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

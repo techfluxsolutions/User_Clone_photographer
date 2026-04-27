@@ -1,0 +1,67 @@
+.navigation-buttons-wrapper {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.nav-btn {
+    pointer-events: auto;
+    background: var(--white-color, #ffffff);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--primary-color, #4A3326);
+    line-height: 0 !important;
+}
+
+/* Explicitly reset icon styles to avoid global overrides from other pages */
+.nav-btn svg {
+    transition: color 0.3s ease;
+    display: block !important;
+    margin: 0 auto !important;
+    font-size: 16px !important; 
+    margin-bottom: 0 !important; /* Remove any global margin-bottom */
+}
+
+/* More specific selector to override global .back-btn styles */
+.navigation-buttons-wrapper .nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+    background: var(--primary-color, #4A3326);
+    color: var(--white-color, #ffffff) !important;
+}
+
+.navigation-buttons-wrapper .nav-btn:hover svg {
+    color: var(--white-color, #ffffff) !important;
+}
+
+.nav-btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .navigation-buttons-wrapper {
+        top: 20px;
+        padding: 0 20px;
+    }
+    
+    .nav-btn {
+        width: 38px;
+        height: 38px;
+    }
+}

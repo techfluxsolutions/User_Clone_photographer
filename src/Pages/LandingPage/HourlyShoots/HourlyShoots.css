@@ -1,0 +1,182 @@
+/* ================================
+   HOURLY SHOOTS SECTION
+================================ */
+
+.hourly-shoots-wrapper {
+    width: 100%;
+    background-color: var(--white-color);
+    /* White background for the section as per screenshot */
+    padding: 0;
+    position: relative;
+    z-index: 10;
+}
+
+.Landing-page-hourly-shoots {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.hourly-shoots-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.hourly-shoots-title {
+    font-family: var(--primary-font-family);
+    /* "Libre Baskerville" */
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--brown-color);
+    /* Dark Brown */
+    margin: 0;
+    text-align: center;
+}
+
+/* Cards container */
+.hourly-shoots-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 100%;
+}
+
+/* Individual hour cards */
+.hourly-card {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    overflow: hidden;
+    /* The camera background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hourly-card:hover {
+    /* transform: translateY(-5px); */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Overlay to wash out the background image slightly so text pops */
+.hourly-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.65);
+    /* White overlay */
+    z-index: 1;
+}
+
+.hourly-card-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    /* Space for button at bottom */
+}
+
+/* Typography matching screenshot */
+.hourly-card-hours {
+    font-family: var(--primary-font-family);
+    font-size: 80px;
+    font-weight: 400;
+    color: #000000;
+    margin: 0;
+    line-height: 1;
+}
+
+.hourly-card-label {
+    font-family: var(--inter-font-family);
+    font-size: 32px;
+    font-weight: 400;
+    color: #000000;
+    margin: 5px 0 40px 0;
+    /* Spacing between text and button */
+}
+
+/* Button Styling */
+.book-now-btn {
+    background-color: var(--maroon-color);
+    /* Dark Brown */
+    color: #ffffff;
+    font-family: var(--inter-font-family);
+    /* Or Poppins/System font */
+    font-size: 16px;
+    font-weight: 400;
+    padding: 15px 0;
+    width: 200px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-now-btn:hover {
+    background-color: #2a1d17;
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 992px) {
+    .hourly-shoots-cards {
+        gap: 15px;
+    }
+
+    .hourly-card-hours {
+        font-size: 70px;
+    }
+
+    .hourly-card-label {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hourly-shoots-title {
+        font-size: 40px;
+    }
+
+    .hourly-shoots-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hourly-shoots-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .hourly-card {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}

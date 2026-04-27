@@ -1,0 +1,94 @@
+.editing-info-section {
+    width: 100%;
+    background-color: var(--white-color, #FFFFFF);
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.editing-toggle-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 90%;
+    max-width: 1200px;
+    margin-bottom: 60px;
+}
+
+.editing-toggle-btn {
+    flex: 1;
+    padding: 15px 0;
+    border-radius: 8px;
+    font-family: var(--primary-font-family);
+    font-size: 28px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #E5E5E5;
+    background-color: var(--white-color, #FFFFFF);
+    color: var(--brown-color, #4A3326);
+}
+
+.editing-toggle-btn.active {
+    background-color: #D6D6D6;
+    border: 1px solid #D6D6D6;
+}
+
+.editing-info-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #F8F8F8;
+    padding: 50px 40px;
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.editing-info-title {
+    font-family: var(--primary-font-family);
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--brown-color, #4A3326);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.editing-info-subtitle {
+    font-family: var(--inter-font-family);
+    font-size: 19px;
+    color: var(--brown-color, #4A3326);
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .editing-info-section {
+        padding: 40px 0;
+    }
+
+    .editing-toggle-buttons {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+
+    .editing-toggle-btn {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .editing-info-title {
+        font-size: 26px;
+    }
+
+    .editing-info-subtitle {
+        font-size: 15px;
+    }
+
+    .editing-info-card {
+        padding: 30px 20px;
+    }
+} 

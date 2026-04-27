@@ -1,0 +1,70 @@
+.logout-modal {
+  background-color: var(--white-color);
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Header */
+.logout-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.logout-modal-header h3 {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.logout-icon {
+  font-size: 22px;
+  color: var(--primary-color);
+}
+
+.logout-modal-header .line {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(var(--primary-color-rgb), 0.3);
+}
+
+/* Message text */
+.logout-modal-text {
+  font-size: 18px;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.logout-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logout-btn {
+  min-width: 100px;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
+
+/* Yes */
+.logout-btn.primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+/* No */
+.logout-btn.secondary {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}

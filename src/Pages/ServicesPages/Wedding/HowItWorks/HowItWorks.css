@@ -1,0 +1,154 @@
+.how-it-works-section {
+    padding: 5px 20px 25px;
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.how-it-works-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--brown-color);
+    display: inline-block;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.steps-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.steps-row.bottom-row {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.step-number {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--maroon-color);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.step-text {
+    font-family: var(--primary-font-family);
+    font-size: 18px;
+    color: var(--brown-color);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.step-connector {
+    width: 60px;
+    height: 1.5px;
+    background-color: #4A3326;
+    margin: 0 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .how-it-works-title {
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+
+    .steps-container {
+        gap: 40px;
+    }
+
+    .step-text {
+        font-size: 16px;
+    }
+
+    .step-connector {
+        width: 50px;
+        margin: 0 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .how-it-works-section {
+        padding: 60px 20px;
+    }
+
+    .how-it-works-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .steps-container {
+        gap: 30px;
+    }
+
+    .steps-row {
+        flex-direction: column;
+        gap: 25px;
+        align-items: flex-start;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .steps-row.bottom-row {
+        max-width: 100%;
+    }
+
+    .step-connector {
+        display: none;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .step-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .how-it-works-section {
+        padding: 40px 15px;
+    }
+
+    .how-it-works-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .steps-container {
+        gap: 20px;
+    }
+
+    .step-text {
+        font-size: 15px;
+    }
+}

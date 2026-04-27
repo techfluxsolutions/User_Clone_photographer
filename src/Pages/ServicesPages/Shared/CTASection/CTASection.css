@@ -1,0 +1,116 @@
+.cta-section {
+    padding: 60px 20px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: center;
+}
+
+.cta-container {
+    background-color: var(--beige-color);
+    border-radius: 20px;
+    padding: 60px 40px;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.cta-title {
+    font-family: var(--primary-font-family);
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--brown-color);
+    line-height: 1.4;
+    margin: 0;
+    max-width: 700px;
+}
+
+.cta-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+}
+
+.cta-button {
+    font-family: var(--inter-font-family);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 18px 80px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    background: var(--maroon-color);
+    color: #ffffff;
+}
+
+.cta-button:hover {
+    transform: scale(1.02);
+    filter: brightness(1.2);
+}
+
+.cta-link {
+    font-family: var(--inter-font-family);
+    font-size: 15px;
+    font-weight: 600;
+    color: #463023;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.cta-link:hover {
+    opacity: 0.7;
+}
+
+.phone-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .cta-container {
+        padding: 50px 30px;
+    }
+
+    .cta-title {
+        font-size: 32px;
+    }
+
+    .cta-button {
+        font-size: 15px;
+        padding: 14px 40px;
+    }
+
+    .cta-link {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-container {
+        padding: 40px 20px;
+    }
+
+    .cta-title {
+        font-size: 28px;
+    }
+
+    .cta-button {
+        font-size: 14px;
+        padding: 12px 35px;
+    }
+
+    .cta-link {
+        font-size: 13px;
+    }
+}

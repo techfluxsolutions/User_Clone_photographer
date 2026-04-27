@@ -1,0 +1,82 @@
+.cancellation-charge-modal .modal-content {
+  background: transparent;
+  border: none;
+}
+
+/* Wrapper */
+.charge-modal-wrapper {
+  background: var( --tertiary-color);
+  border-radius: 18px;
+  padding: 32px 36px;
+  text-align: center;
+  min-width: 420px;
+}
+
+/* Text */
+.charge-text {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+/* Charge box */
+.charge-box {
+  background: var(--white-color);
+  border-radius: 10px;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 26px;
+  font-size: 14px;
+  color: rgba(74, 51, 38, 0.7);
+}
+
+.charge-box .amount {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Button */
+.confirm-cancel-btn {
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 26px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.charge-btn-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cancel-btn-outstandingAmount {
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 26px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cancel-btn-outstandingAmount:hover {
+opacity: 0.9;
+}
+.confirm-cancel-btn:hover {
+  opacity: 0.9;
+}
+@media (max-width: 576px) {
+  .charge-modal-wrapper {
+  min-width: auto;
+}
+}
+

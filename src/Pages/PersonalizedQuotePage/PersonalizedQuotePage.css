@@ -1,0 +1,101 @@
+.quote-wrapper {
+  min-height: 100vh;
+  background-color: var(--white-color);
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.quote-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+}
+
+/* Card */
+.quote-card {
+  background-color: var(--tertiary-color);
+  /* padding: 40px 35px; */
+  padding: 60px 90px;
+  border-radius: 44px;
+  max-width: 950px;
+}
+
+.quote-card-inputes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* Labels */
+.center-label {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  /* color: var(--primary-color); */
+  color: rgba(var(--primary-color-rgb), 0.8);
+  margin-bottom: 0;
+  /* important */
+  text-align: left;
+  /* FIX */
+}
+
+/* Inputs */
+.quote-input {
+  height: 45px;
+  border-radius: 10px;
+  background-color: transparent !important;
+  border: 1px solid #5A000033 !important;
+  font-size: 16px;
+  padding: 10px 14px;
+  width: 440px !important;
+}
+
+.quote-input:focus {
+  box-shadow: none;
+  border: 1px solid var(--primary-color);
+}
+
+
+
+/* Desktop input width stays */
+@media (min-width: 992px) {
+  .quote-input {
+    width: 440px !important;
+  }
+}
+
+/* Tablet & Mobile */
+@media (max-width: 991px) {
+  .quote-card {
+    padding: 40px 30px;
+  }
+
+  .center-label {
+    text-align: left;
+    margin-bottom: 6px;
+  }
+
+  .buttons {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 576px) {
+  .title {
+    font-size: 26px;
+  }
+
+  .quote-card {
+    padding: 25px 20px;
+    border-radius: 24px;
+  }
+
+  .quote-input {
+    height: 42px;
+    font-size: 14px;
+  }
+}

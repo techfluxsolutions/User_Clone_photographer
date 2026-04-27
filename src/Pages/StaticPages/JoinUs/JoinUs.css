@@ -1,0 +1,157 @@
+/* Wrapper */
+.joinUs-wrapper {
+  min-height: 100vh;
+  background-color: var(--white-color);
+  padding: 80px 15px 40px 15px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Title */
+.joinUs-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+}
+
+/* Card */
+.joinUs-card {
+  background-color: var(--tertiary-color);
+  padding: 50px 60px;
+  border-radius: 40px;
+  max-width: 950px;
+  width: 100%;
+}
+
+/* Labels */
+.center-label {
+  font-size: 15px;
+  /* color: rgba(var(--primary-color-rgb), 0.8); */
+  color: black;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Inputs */
+.joinUs-input {
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid #5A000033 !important;
+  background: transparent !important;
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 15px;
+}
+
+/* Input Focus */
+.joinUs-input:focus {
+  border: 1px solid var(--primary-color) !important;
+  box-shadow: none;
+}
+
+/* Radio + Checkbox container */
+.joinUs-options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+/* Each option row */
+.joinUs-option-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Radio / Checkbox size */
+.joinUs-option-item input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Submit Button */
+.joinUs-submit-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 12px 40px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.joinUs-submit-btn:hover {
+  opacity: 0.9;
+}
+/* Radio + Checkbox Color Control */
+.joinUs-option-item input[type="radio"],
+.joinUs-option-item input[type="checkbox"] {
+  accent-color: var(--primary-color);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.required {
+  color: red;
+  margin-left: 4px;
+}
+
+.error-input {
+  border: 1px solid var(--primary-color) !important;
+}
+
+.error-group {
+  border: 1px solid var(--primary-color);
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.error-text {
+  color: var(--primary-color);
+  font-size: 12px;
+}
+
+
+/* ================= Tablet ================= */
+@media (max-width: 991px) {
+  .joinUs-card {
+    padding: 40px 30px;
+  }
+}
+
+/* ================= Mobile ================= */
+@media (max-width: 576px) {
+
+  .joinUs-wrapper {
+    padding: 25px 10px;
+  }
+
+  .joinUs-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .joinUs-card {
+    padding: 25px 18px;
+    border-radius: 20px;
+  }
+
+  .joinUs-input {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .joinUs-option-item {
+    font-size: 14px;
+  }
+
+  .joinUs-submit-btn {
+    width: 100%;
+    padding: 10px;
+  }
+}

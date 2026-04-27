@@ -1,0 +1,341 @@
+.ebf-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: inherit;
+    color: #4a3c3c;
+}
+
+.ebf-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.ebf-loading-small {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: #5d4037;
+    font-style: italic;
+}
+
+.ebf-section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #5d4037;
+    margin-bottom: 2rem;
+    /* margin-top: 3rem; */
+    font-family: inherit;
+}
+
+.ebf-quantities-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.ebf-quantity-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ebf-quantity-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ebf-quantity-card.selected {
+    border-color: #4a3c3c;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ebf-qty-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.ebf-qty-subtitle {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.ebf-qty-price-btn {
+    background-color: #362222;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Packages Grid */
+.ebf-packages-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.ebf-packages-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.ebf-package-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    /* Reduced from 2rem top/bottom */
+    width: 440px;
+    min-height: 400px;
+    /* Reduced from 500px to encourage smaller footprint */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.ebf-package-card.premium-card {
+    border: 3px solid #dac174;
+    box-shadow: 0 4px 12px rgba(218, 193, 116, 0.4);
+}
+
+.ebf-package-card.premium-card::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -35px;
+    width: 120px;
+    height: 25px;
+    background: linear-gradient(to right, #4B3B13, #B18B2C, #4B3B13);
+    /* Gold gradient */
+    transform: rotate(45deg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ebf-package-header {
+    text-align: center;
+    margin-bottom: 0.8rem;
+    /* Reduced margin */
+    padding-bottom: 0.8rem;
+    /* Reduced padding */
+    border-bottom: 1px solid #eee;
+}
+
+.ebf-package-title {
+    font-size: 1.2rem;
+    /* Reduced font size */
+    letter-spacing: 1px;
+    margin-bottom: 0.3rem;
+    /* Reduced margin */
+    color: #333;
+}
+
+.ebf-package-price {
+    font-size: 1.5rem;
+    /* Reduced font size */
+    font-weight: bold;
+    color: #4a3c3c;
+}
+
+.ebf-package-features { 
+    list-style: none;
+    /* using checkmarks */
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    text-align: start;
+}
+
+.ebf-package-features li {
+    font-size: 0.8rem;
+    /* Reduced font size */
+    color: #333;
+    margin-bottom: 0.4rem;
+    /* Reduced margin between items */
+    display: flex;
+    align-items: flex-start;
+    gap: 0.4rem;
+}
+
+.ebf-check-icon {
+    color: #0c9f13;
+    /* Green checkmark */
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.ebf-package-footer {
+    margin-top: 1rem;
+    /* Reduced top margin to pull button up */
+    text-align: center;
+}
+
+.ebf-add-btn {
+    background-color: #362222;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.ebf-add-btn:hover {
+    background-color: #5d4037;
+}
+
+/* Cart Container */
+.ebf-cart-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.ebf-cart {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ebf-cart-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.ebf-cart-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.ebf-cart-icon {
+    font-size: 1.8rem;
+}
+
+.ebf-cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 1.5rem;
+}
+
+.ebf-cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.ebf-cart-item:last-child {
+    border-bottom: none;
+}
+
+.ebf-cart-item-name {
+    flex: 1;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #4a3c3c;
+}
+
+.ebf-cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 0 1rem;
+    background: #fdfdfd;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.ebf-qty-btn {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #333;
+    padding: 0 5px;
+}
+
+.ebf-qty-val {
+    min-width: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.ebf-cart-item-price {
+    font-weight: bold;
+    color: #333;
+    min-width: 70px;
+    text-align: right;
+}
+
+.ebf-cart-total-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #362222;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.ebf-cart-total-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.ebf-view-cart-btn {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .ebf-packages-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ebf-package-card {
+        width: 100%;
+        max-width: 480px;
+    }
+}

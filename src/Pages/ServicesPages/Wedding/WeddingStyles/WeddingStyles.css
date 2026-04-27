@@ -1,0 +1,169 @@
+.wedding-styles-section {
+    padding: 50px 20px;
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wedding-styles-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: #4a3f35;
+    margin-bottom: 60px;
+    text-align: center;
+    background: transparent;
+    color: var(--brown-color);
+    display: inline-block;
+}
+
+.wedding-styles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.wedding-styles-row {
+    display: grid;
+    gap: 30px;
+    width: 100%;
+}
+
+.wedding-styles-row.top-row {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.wedding-styles-row.bottom-row {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 66.66%;
+    margin: 0 auto;
+}
+
+.wedding-style-card {
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 0.818;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.wedding-style-card:hover {
+    transform: scale(1.05);
+}
+
+.wedding-style-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 30px;
+    background: transparent;
+}
+
+
+
+.wedding-style-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .wedding-styles-title {
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+
+    .wedding-styles-container {
+        gap: 25px;
+    }
+
+    .wedding-styles-row {
+        gap: 25px;
+    }
+
+    .wedding-style-name {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wedding-styles-section {
+        padding: 60px 20px;
+    }
+
+    .wedding-styles-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .wedding-styles-container {
+        gap: 20px;
+    }
+
+    .wedding-styles-row {
+        gap: 20px;
+    }
+
+    .wedding-styles-row.top-row,
+    .wedding-styles-row.bottom-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        grid-template-columns: none;
+        max-width: 100%;
+    }
+
+    .wedding-style-card {
+        width: calc(50% - 10px);
+    }
+
+    .wedding-style-name {
+        font-size: 24px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wedding-styles-section {
+        padding: 40px 15px;
+    }
+
+    .wedding-styles-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .wedding-styles-container {
+        gap: 15px;
+    }
+
+    .wedding-styles-row {
+        gap: 15px;
+    }
+
+    .wedding-style-card {
+        width: 95%;
+        aspect-ratio: 1.2;
+    }
+
+    .wedding-style-name {
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,129 @@
+.Maternity-hero {
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+}
+
+.Maternity-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.30);
+    /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.Maternity-content {
+    position: relative;
+    top: -8%;
+    z-index: 2;
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.Maternity-title {
+    font-family: var(--primary-font-family);
+    font-size: 48px;
+    /* font-weight: 600; */
+    line-height: 1.2;
+    margin: 0;
+    color: white;
+    text-align: left;
+    font-weight: 600;
+}
+
+.Maternity-subtitle {
+    /* font-family: var(--tertiary-font-family); */
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    letter-spacing: 0.5px;
+    color: white;
+    text-align: left;
+    line-height: 1.2;
+    opacity: 1;
+}
+
+.Maternity-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.Maternity-btn {
+    padding: 10px 30px;
+    font-size: 16px;
+    /* font-family: var(--primary-font-family); */
+    font-weight: 500;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.Maternity-btn-quote {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.Maternity-btn-contact {
+    background-color: var(--maroon-color);
+    color: #FFFFFF;
+}
+
+.Maternity-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .Maternity-hero {
+        height: auto;
+        min-height: 60vh !important;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .Maternity-content {
+        padding: 0 30px;
+    }
+
+    .Maternity-title {
+        font-size: 32px;
+    }
+
+    .Maternity-subtitle {
+        font-size: 16px;
+    }
+
+    .Maternity-buttons {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .Maternity-btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,72 @@
+.Sucess-CancelBooking-success-booking-modal .modal-content {
+  background: transparent;
+  border: none;
+}
+
+/* Wrapper */
+.Sucess-CancelBooking-success-modal-wrapper {
+  background: #ede4d7;
+  border-radius: 20px;
+  padding: 36px 48px 40px;
+  text-align: center;
+  min-width: 420px;
+}
+
+/* Icon */
+.Sucess-CancelBooking-success-icon-cancelBooking {
+  width: 52px;
+  height: 52px;
+  border: 1.5px solid #4a3326;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4a3326;
+  font-size: 26px;
+  margin: 0 auto 18px;
+}
+
+/* Title */
+.Sucess-CancelBooking-success-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #4a3326;
+  margin-bottom: 8px;
+}
+
+/* Description */
+.Sucess-CancelBooking-success-desc {
+  font-size: 14px;
+  color: rgba(74, 51, 38, 0.7);
+  margin-bottom: 26px;
+}
+
+/* Button */
+.Sucess-CancelBooking-go-back-btn {
+  background: #4a3326;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 28px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.Sucess-CancelBooking-go-back-btn:hover {
+  opacity: 0.9;
+}
+
+/* Image icon */
+.Sucess-CancelBooking-success-icon-img {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 18px;
+  display: block;
+}
+
+@media (max-width: 576px) {
+  .Sucess-CancelBooking-success-modal-wrapper {
+    min-width: auto;
+  }
+}

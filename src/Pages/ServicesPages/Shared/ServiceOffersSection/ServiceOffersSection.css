@@ -1,0 +1,173 @@
+.service-offers-section {
+    padding: 50px 20px 45px;
+    background-color: var(--white-color);
+    text-align: center;
+    overflow: hidden;
+}
+
+.offers-title {
+    font-family: var(--primary-font-family);
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    background: transparent;
+    color: var(--brown-color);
+    display: inline-block;
+    display: inline-block;
+}
+
+.offers-cards-wrapper {
+    max-width: 870px;
+    /* 3 cards * 250px + 2 gaps * 30px = 870px */
+    margin: 0 auto;
+    overflow: visible;
+    /* Changed from hidden to visible for 3D effect */
+    position: relative;
+    perspective: 1000px;
+    /* Add 3D perspective globally */
+}
+
+.offers-cards-container {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+/* Global Cube Effect Styles */
+.cube-effect {
+    transform-style: preserve-3d;
+}
+
+/* Force all cards in cube effect to have consistent base styling */
+.cube-effect .offers-card {
+    transform-origin: center center;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    opacity: 0.5;
+    transform: scale(0.9) rotateY(0deg);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Active card overrides */
+.cube-effect .offers-card.active {
+    opacity: 1 !important;
+    transform: scale(1) rotateY(0deg) !important;
+    z-index: 10;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Ensure all non-active cards are identical - use !important to override any other rules */
+.cube-effect .offers-card:not(.active) {
+    opacity: 0.5 !important;
+    transform: scale(0.9) rotateY(0deg) !important;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+.offers-card {
+    background: #FFFFFF;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    min-width: 250px;
+    width: 250px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+/* Remove hover effect for cube effect cards to prevent interference */
+.cube-effect .offers-card:hover {
+    /* Disable hover transform for cube effect */
+}
+
+/* Non-cube effect cards can still have hover */
+.offers-cards-container:not(.cube-effect) .offers-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+}
+
+.offers-icon-wrapper {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offers-icon {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.offers-card-title {
+    font-family: var(--inter-font-family) !important;
+    color: #4A3326;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* Pagination
+.pagination-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+} */
+
+/* .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #E0D6CD;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot.active {
+    background-color: #4A3326;
+    transform: scale(1.2);
+}
+
+.dot:hover {
+    background-color: #B0795A; */
+
+
+@media (max-width: 900px) {
+    .service-offers-section {
+        padding: 40px 20px 50px;
+    }
+
+    .offers-cards-wrapper {
+        max-width: 220px;
+        /* Show 1 card on mobile */
+        perspective: 800px;
+        overflow: visible;
+    }
+
+    .offers-cards-container {
+        gap: 15px;
+    }
+
+    .offers-card {
+        min-width: 220px;
+        width: 220px;
+        height: auto;
+        padding: 10px 10px;
+    }
+
+    .offers-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .offers-title {
+        font-size: 28px;
+    }
+}

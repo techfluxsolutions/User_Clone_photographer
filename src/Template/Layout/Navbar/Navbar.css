@@ -1,0 +1,579 @@
+/* ================================
+   NAVBAR
+================================ */
+
+
+.navbar {
+  /* position: fixed !important; Removed default fixed */
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--white-color);
+  /* Default: Colored (Secondary) */
+  min-height: 70px;
+  z-index: 1100;
+  padding: 15px 80px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-fixed {
+  position: fixed !important;
+  top: 0 !important;
+}
+
+.nav-sticky {
+  position: sticky !important;
+  top: 0 !important;
+}
+
+.navbar.transparent {
+  background-color: transparent !important;
+  box-shadow: none;
+}
+
+.navbar-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+/* Logo - Left Side */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: 55px;
+}
+
+.navbar-logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Navigation Menu - After Logo */
+.navbar-menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  margin-left: 40px;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 0;
+}
+
+.nav-link {
+  color: var(--primary-color);
+  font-family: var(--primary-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+  opacity: 0.8;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid var(--primary-color);
+  font-weight: 500;
+}
+
+/* Right Section - Action Buttons (Desktop - Overlay on Dark Image) */
+.navbar-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: 240px;
+}
+
+/* Login - Default (Colored Navbar) */
+.navbar-actions .btn-login {
+  background-color: var(--primary-color);
+  color: #FFFFFF !important;
+  padding: 8px 24px;
+  border-radius: 6px;
+  border: 1px solid var(--primary-color);
+  font-family: var(--primary-font-family);
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.navbar-actions .btn-login:hover {
+  background-color: #3d2a1f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Get a Quote - Default (Colored Navbar) */
+.navbar-actions .btn-quote {
+  background-color: transparent;
+  color: var(--primary-color);
+  padding: 8px 24px;
+  border-radius: 6px;
+  border: 1px solid var(--primary-color);
+  font-family: var(--primary-font-family);
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.navbar-actions .btn-quote:hover {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* === OVERRIDES FOR TRANSPARENT (HERO) NAVBAR === */
+
+/* Login - Hero (White BG, Brown Text) */
+.navbar.transparent .navbar-actions .btn-login {
+  background-color: #FFFFFF;
+  color: #4A3326 !important;
+  border: 1px solid #FFFFFF;
+}
+
+.navbar.transparent .navbar-actions .btn-login:hover {
+  background-color: #F0F0F0;
+}
+
+/* Quote - Hero (White Border, White Text) */
+.navbar.transparent .navbar-actions .btn-quote {
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+}
+
+.navbar.transparent .navbar-actions .btn-quote:hover {
+  background-color: #FFFFFF;
+  color: #4A3326;
+}
+
+/* GENERIC / MOBILE BUTTON STYLES (Fallback for Mobile Sidebar) */
+/* Login Button - Filled Brown */
+.mobile-actions .btn-login {
+  background-color: var(--primary-color);
+  color: #ffff !important;
+  padding: 8px 20px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+}
+
+.mobile-actions .btn-login:hover {
+  background-color: #3d2a1f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-decoration: none !important;
+}
+
+/* Get a Quote Button - Outlined Brown */
+.mobile-actions .btn-quote {
+  background-color: transparent;
+  color: var(--primary-color);
+  padding: 8px 20px;
+  border-radius: 6px;
+  border: 1px solid var(--primary-color);
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+
+}
+
+.mobile-actions .btn-quote:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-decoration: none !important;
+
+}
+
+.profile-icon {
+  font-size: 26px;
+  color: var(--primary-color);
+}
+
+.profile-dropdown-wrapper {
+  position: relative;
+}
+
+.profile-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.profile-dropdown {
+  position: absolute;
+  right: -60px;
+  top: 40px;
+  background: var(--primary-color);
+  color: #ffff;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  min-width: 110px;
+  z-index: 1000;
+  text-align: left;
+}
+
+.profile-dropdown .dropdown-item {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* .profile-dropdown .dropdown-item:hover {
+  background: var(--primary-color);
+} */
+
+
+
+/* SERVICES DROPDOWN */
+.services-wrapper {
+  position: relative;
+}
+
+.services-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown box */
+.services-dropdown {
+  position: absolute;
+  top: 30px;
+  /* Reduced from 40px to fix hover gap */
+  padding-top: 10px;
+  /* Added padding to bridge gap */
+  left: 5px;
+  width: 240px;
+  /* max-height removed for full list */
+  /* overflow-y removed for no scroll */
+  background-color: var(--maroon-color) !important;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  z-index: 999;
+  padding: 8px 0;
+  text-align: left;
+}
+
+/* Dropdown items */
+.services-dropdown div {
+  padding: 10px 16px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #ffff;
+  transition: background 0.2s ease;
+  font-family: var(--primary-font-family);
+}
+
+.services-dropdown div:hover {
+  /* background: rgba(0, 0, 0, 0.05); */
+  background: var(--primary-color);
+}
+
+/* Custom scrollbar */
+.services-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.services-dropdown::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+
+/* ===== Mobile Navbar ===== */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--primary-color);
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1150;
+}
+
+/* Hide desktop actions on mobile */
+@media (max-width: 768px) {
+
+  .navbar-menu,
+  .navbar-actions {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
+/* ===== Mobile Sidebar ===== */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background: var(--white-color);
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: right 0.3s ease;
+  z-index: 2000;
+  overflow-y: auto;
+}
+
+.mobile-sidebar.open {
+  right: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.mobile-logo {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.sidebar-header button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.mobile-nav-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(74, 51, 38, 0.1);
+  font-family: var(--primary-font-family);
+}
+
+.mobile-services-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mobile-services-btn {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 400;
+  /* text-align: left; */
+  cursor: pointer;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(74, 51, 38, 0.1);
+  font-family: var(--primary-font-family);
+}
+
+.mobile-services-dropdown {
+  display: flex;
+  flex-direction: column;
+  background: rgba(74, 51, 38, 0.05);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.mobile-services-dropdown div {
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--primary-color);
+  transition: background 0.2s ease;
+  font-family: var(--primary-font-family);
+}
+
+.mobile-services-dropdown div:hover {
+  background: rgba(74, 51, 38, 0.1);
+  border-radius: 4px;
+}
+
+.mobile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(74, 51, 38, 0.1);
+}
+
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1999;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: #c0392b;
+  font-size: 16px;
+  text-align: left;
+  padding: 10px 0;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(74, 51, 38, 0.1);
+  font-family: var(--primary-font-family);
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 0px 50px;
+  }
+
+  .logo-img {
+    height: 60px;
+  }
+
+  .navbar-menu {
+    gap: 25px;
+    margin-left: 40px;
+  }
+
+  .navbar-actions {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: 0 30px;
+  }
+
+  .navbar-logo {
+    margin-left: 5%;
+  }
+
+  .navbar-menu {
+    gap: 20px;
+    margin-left: 30px;
+  }
+
+  .navbar-actions {
+    margin-left: 0;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+
+  .btn-login,
+  .btn-quote {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 930px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-logo {
+    margin-left: 2%;
+  }
+
+  .navbar-menu {
+    gap: 15px;
+    margin-left: 20px;
+  }
+
+  .navbar-actions {
+    margin-left: 0;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .btn-login,
+  .btn-quote {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    min-height: 70px;
+    padding: 10px 15px;
+  }
+
+  .navbar-container {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .logo-img {
+    height: 50px;
+  }
+
+  .mobile-logo-img {
+    height: 35px;
+  }
+}

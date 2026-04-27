@@ -1,0 +1,94 @@
+/* Main Container */
+.booking-success-container {
+    width: 100%;
+    min-height: 85vh;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px 60px 20px;
+}
+
+.booking-success-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Title section */
+.success-title {
+    font-family: var(--primary-font-family);
+    font-size: 48px;
+    font-weight: 600;
+    color: #4CAF50;
+    /* Green color matching the "Yayy" text */
+    margin: 0 0 30px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* Tick Image */
+.success-image-container {
+    margin-bottom: 40px;
+}
+
+.success-tick {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    /* Add a subtle drop shadow if needed, or rely on the image's own shadow if it has one (looks 3D) */
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+}
+
+/* Bottom Message */
+.success-message {
+    font-family: var(--primary-font-family);
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.go-profile-btn {
+    margin-top: 30px;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-family: var(--primary-font-family);
+    font-weight: 500;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.go-profile-btn:hover {
+    opacity: 0.9;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .success-title {
+        font-size: 36px;
+        flex-direction: column;
+        /* Stack hat on mobile if needed, or keep inline */
+        gap: 10px;
+    }
+
+    .success-tick {
+        width: 100px;
+        height: 100px;
+    }
+
+    .success-message {
+        font-size: 20px;
+    }
+}

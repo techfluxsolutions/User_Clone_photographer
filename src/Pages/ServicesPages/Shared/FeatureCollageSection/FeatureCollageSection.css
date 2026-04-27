@@ -1,0 +1,225 @@
+/* ================================
+   FEATURE COLLAGE SECTION (Grid Layout)
+================================ */
+
+.feature-collage-section {
+    width: 100%;
+    background-color: var(--white-color);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    /* Isolate paint to this element — prevents full-page repaints when animation runs */
+    contain: layout paint;
+    /* Promote to its own GPU composite layer */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+/* Header */
+.feature-collage-header {
+    width: 100%;
+    /* background-color: var(--white-color); */
+    padding: 30px 40px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.feature-collage-title {
+    font-family: var(--primary-font-family);
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--brown-color);
+    margin: 0;
+}
+
+/* Slider Container */
+.feature-collage-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 1px;
+}
+
+/* Track */
+.feature-collage-track {
+    display: flex;
+    width: max-content;
+    gap: 5px;
+    /* Gap between the large blocks */
+    padding-left: 15px;
+
+    /* GPU-accelerated: runs entirely on compositor thread, zero main-thread paint cost */
+    animation: shared-collage-scroll 60s linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+}
+
+.feature-collage-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes shared-collage-scroll {
+    0% {
+        transform: translateX(0) translateZ(0);
+    }
+
+    100% {
+        /* Move 1/3 of the track width (since we have 3 blocks) */
+        /* Account for the 5px gap between the blocks */
+        transform: translateX(calc(-33.333% - 5px)) translateZ(0);
+    }
+}
+
+/* 
+   THE COMPONENT BLOCK
+   Grid Layout: 4 Columns, 2 Rows
+   Pattern: [Tall] [Split] [Tall] [Split]
+*/
+.feature-collage-block {
+    display: grid;
+    /* 
+       4 Columns:
+       We use specific widths or fractions. 
+       Let's make them roughly equal relative to the height.
+       If height is 500px, a tall image is ~250px wide? 
+       Let's try fixed pixel widths for stability in the slider.
+    */
+    grid-template-columns: 300px 320px 280px 265px;
+    grid-template-rows: 250px 240px;
+    gap: 5px;
+
+    flex-shrink: 0;
+    /* Don't squash me */
+    height: 515px;
+    /* 250+250+15 gap */
+
+    /* Contain layout/style to each block for faster recalcs */
+    contain: layout style;
+}
+
+/* Common Image Style */
+.collage-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    /* Slight radius or keep sharp as per screenshot? Screenshot looks sharp/minimal radius */
+
+    /* Own GPU layer — each cell composited independently */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* Smooth hover: cubic-bezier for polished feel, GPU composited */
+    transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+}
+
+.collage-item:hover img {
+    transform: scale(1.04) translateZ(0);
+}
+
+/* 
+   GRID PLACEMENT 
+   Col 1: Tall 
+   Col 2: Split
+   Col 3: Tall
+   Col 4: Split
+*/
+
+/* Column 1: Tall */
+.item-tall-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+/* Column 2: Split */
+.item-split-top-1 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.item-split-bottom-1 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+/* Column 3: Tall */
+.item-tall-2 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+
+/* Column 4: Split */
+.item-split-top-2 {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+}
+
+.item-split-bottom-2 {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1200px) {
+    .feature-collage-block {
+        grid-template-columns: 255px 272px 238px 225px;
+        grid-template-rows: 240px 230px;
+        height: 475px;
+        gap: 5px;
+    }
+
+    .feature-collage-track {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 992px) {
+    .feature-collage-block {
+        grid-template-columns: 252px 269px 235px 222px;
+        grid-template-rows: 252px 240px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .feature-collage-title {
+        font-size: 32px;
+    }
+
+    .feature-collage-block {
+        grid-template-columns: 216px 230px 202px 191px;
+        grid-template-rows: 216px 204px;
+        height: 425px;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .feature-collage-block {
+        grid-template-columns: 200px 230px 240px 205px;
+        grid-template-rows: 200px 200px;
+        height: 390px;
+        gap: 5px;
+    }
+
+    .feature-collage-title {
+        font-size: 28px;
+    }
+}

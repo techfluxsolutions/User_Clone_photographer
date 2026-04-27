@@ -1,0 +1,73 @@
+/* Wrapper */
+.booking-wrapper {
+  padding-top: 20px;
+}
+
+/* Title */
+.booking-title {
+  /* font-family: "Georgia", serif; */
+  font-size: 30px;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  text-align: left;
+  font-weight: 700;
+}
+
+/* Tabs container */
+.custom-tabs .nav-tabs {
+  border-bottom: 1px solid #4a3326;
+ 
+}
+.nav-tabs {
+ gap: 40px !important;
+ margin-bottom: 50px !important;
+}
+/* Tab text */
+.custom-tabs .nav-link {
+  border: none !important;
+  background: transparent !important;
+  padding: 0 0 10px 0;
+  font-family: "Georgia", serif;
+  font-size: 18px;
+  color: var(--primary-color);
+  position: relative;
+}
+
+/* Remove bootstrap focus */
+.custom-tabs .nav-link:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Hover */
+.custom-tabs .nav-link:hover {
+  color: #5a3a2e;
+}
+
+/* Active tab */
+.custom-tabs .nav-link.active {
+  color: #5a3a2e;
+  font-weight: 500;
+}
+
+/* Active underline */
+.custom-tabs .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background-color: #5a3a2e;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .custom-tabs .nav-tabs {
+    gap: 20px;
+  }
+
+  .custom-tabs .nav-link {
+    font-size: 16px;
+  }
+}

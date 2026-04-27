@@ -1,0 +1,38 @@
+.fullpage-error {
+  min-height: 100vh;
+  background-color: var(--color-bg-main);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-box {
+  background-color: var(--color-bg-secondary);
+  padding: 40px 50px;
+  border-radius: 14px;
+  text-align: center;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.error-box h1 {
+  color: var(--brown-color);
+  font-family: var(--primary-font-family);
+  margin-bottom: 12px;
+}
+
+.error-box p {
+  font-family: var(--inter-font-family);
+  margin-bottom: 22px;
+  color: #555;
+}
+
+.error-box button {
+  background-color: var(--brown-color);
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+}

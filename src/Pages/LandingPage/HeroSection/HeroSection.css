@@ -1,0 +1,226 @@
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero-section {
+    position: sticky;
+    top: 0;
+    z-index: 0;
+    min-height: 100vh;
+    width: 100%;
+    /* Background Images setup - Multiple backgrounds: left and right */
+    background-color: var(--white-color);
+    /* background-image:
+  url('../../../public/assets/landing-page/landing-hero-left.png'),
+  url('../../../assets/landing-page/hero8.png'); */
+
+    background-image:
+        url('../../../../public/asset/landing-page/hero9.webp');
+
+    background-size: auto 100%;
+    background-position: top right;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    /* overflow: hidden; */
+    transform: translateZ(0);
+  backface-visibility: hidden;
+    padding-top: 0;
+    /* Remove padding top so it starts from very top */
+
+}
+
+
+.hero-content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Align to left */
+    height: 100%;
+}
+
+/* Left Side - Text Content */
+.hero-text-container {
+    flex: 0 0 auto;
+    max-width: 600px;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+    padding-top: 120px;
+    /* Push down to clear navbar if needed */
+}
+
+.hero-title {
+    font-family: var(--primary-font-family);
+    /* Ensure this is a serif font like Playfair Display if available, or similar */
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--brown-color);
+    /* Dark Brown from screenshot */
+    margin: 0;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-family: var(--inter-font-family);
+    font-size: 22px;
+    font-weight: 500;
+    color: #332824;
+    opacity: 0.8;
+    margin: 0;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 450px;
+    /* text-align: center; */
+    /* Centered Text */
+    /* margin-left: auto;  */
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.hero-btn {
+    padding: 16px 32px;
+    font-size: 16px;
+    font-family: var(--inter-font-family);
+    font-weight: 500;
+    border-radius: 12px;
+    /* Slightly rounded corners */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+    min-width: 200px;
+    text-align: center;
+}
+
+/* Explore Services - Light Button */
+.btn-secondary {
+    background-color: var(--maroon-color);
+    color: #FFFFFF;
+    /* border: 1px solid #E5E5E5; */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.btn-secondary:hover {
+    background-color: #776351;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Get a Quote - Dark Button */
+.btn-primary {
+    background-color: #776351;
+    color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(74, 51, 38, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--maroon-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 51, 38, 0.4);
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 64px;
+    }
+
+    .hero-section {
+        background-position: right center;
+        /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        background-size: cover;
+        /* Cover background on tablet to handle height */
+        background-position: center;
+    }
+
+    .hero-title {
+        color: #FFFFFF
+    }
+
+    .hero-content-wrapper {
+        padding: 0 40px;
+        justify-content: center;
+    }
+
+    .hero-text-container {
+        max-width: 100%;
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    .hero-subtitle {
+        margin: 0 auto 40px auto;
+        color: #FFFFFF
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: auto;
+        padding-bottom: 60px;
+        background-image: none;
+        /* Consider removing or stacking image on mobile */
+        /* Alternatively, keep it but manage opacity or position */
+        background: linear-gradient(135deg, var(--white-color) 0%, #f0ece9 100%);
+    }
+
+    .hero-title {
+        font-size: 48px;
+        color: var(--brown-color);
+    }
+
+    .hero-subtitle {
+        color: var(--brown-color);
+    }
+
+    .hero-text-container {
+        padding-top: 100px;
+    }
+
+    .hero-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 42px;
+    }
+
+    .hero-content-wrapper {
+        padding: 0 24px;
+    }
+}
