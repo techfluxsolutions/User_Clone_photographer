@@ -3,18 +3,18 @@ import FeatureCollageSection from '../../Shared/FeatureCollageSection/FeatureCol
 
 const EventGallery = () => {
   const eventImages = [
-    'Gallery/Event1.jpg', // Tall
-    'Gallery/Event2.jpg', // Top Split 1
-    'Gallery/Event3.jpg', // Bottom Split 1
-    'Gallery/Event4.jpeg', // Tall
-    'Gallery/Event5.jpg', // Top Split 2
-    'Gallery/Event6.jpg', // Bottom Split 2
-    'Gallery/Event7.jpg', // Tall
-    'Gallery/Event8.jpg', // Top Split 1
-    'Gallery/Event9.jpg', // Bottom Split 1
-    'Gallery/Event10.jpg', // Tall
-    'Gallery/Event11.jpg', // Top Split 2
-    'Gallery/Event12.jpg', // Bottom Split 2
+    'Gallery/Event1.JPG', // Tall
+    'Gallery/Event2.JPG', // Top Split 1
+    'Gallery/Event3.JPG', // Bottom Split 1
+    'Gallery/Event4.JPEG', // Tall
+    'Gallery/Event5.JPG', // Top Split 2
+    'Gallery/Event6.JPG', // Bottom Split 2
+    'Gallery/Event7.JPG', // Tall
+    'Gallery/Event8.JPG', // Top Split 1
+    'Gallery/Event9.JPG', // Bottom Split 1
+    'Gallery/Event10.JPG', // Tall
+    'Gallery/Event11.JPG', // Top Split 2
+    'Gallery/Event12.JPG', // Bottom Split 2
   ];
 
   return (

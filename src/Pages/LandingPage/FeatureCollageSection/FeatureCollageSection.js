@@ -21,12 +21,12 @@ const FeatureCollageSection = () => {
     // ],
     // Event
     [
-      'asset/ServicePages/Event/Gallery/Event1.jpg',
-      'asset/ServicePages/Event/Gallery/Event2.jpg', 
-      'asset/ServicePages/Event/Gallery/Event3.jpg', 
+      'asset/ServicePages/Event/Gallery/Event1.JPG',
+      'asset/ServicePages/Event/Gallery/Event2.JPG', 
+      'asset/ServicePages/Event/Gallery/Event3.JPG', 
       'asset/ServicePages/Event/Gallery/Event4.jpeg', 
-      'asset/ServicePages/Event/Gallery/Event5.jpg', 
-      'asset/ServicePages/Event/Gallery/Event6.jpg'
+      'asset/ServicePages/Event/Gallery/Event5.JPG', 
+      'asset/ServicePages/Event/Gallery/Event6.JPG'
     ],
     // Automotive
     [
